@@ -36,4 +36,8 @@ while intentos < 3:
     if password != passw:
         print("Acceso invalido")
     intentos += 1
+print("")
+print("")
+
+
 
