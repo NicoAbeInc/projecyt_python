@@ -9,22 +9,32 @@ print("4. Onzas")
 unidad_entrada = int(input("\nSelecciona la unidad de origen: "))
 unidad_salida = int(input("\nSelecciona la unidad de destino: "))
 
-peso = float(input("Ingresa el peso: "))
+peso = float(input("\nIngresa el peso: "))
+
+def formatear_numero(numero):
+    if numero.is_integer():
+        return int(numero)
+    
+    return round(numero, 2)
 
 if unidad_entrada == 1:
     kilogramos = peso
+    unidad_origen = "kg"
 
 elif unidad_entrada  == 2:
     kilogramos = peso / 100
+    unidad_origen = "g"
     
 elif unidad_entrada == 3:
     kilogramos  = peso * 0.453592
+    unidad_origen = "lb"
     
 elif unidad_entrada == 4:
     kilogramos = peso * 0.0283495
+    unidad_origen = "oz"
     
 else:
-    print("Unidad de origen no valida.")
+    print("\nUnidad de origen no valida.")
     kilogramos = None
     
 if kilogramos is not None:
@@ -47,7 +57,7 @@ if kilogramos is not None:
         
     else:
         resultado = None
-        print("Unidad de destino no valida")
+        print("\nUnidad de destino no valida")
         
     if resultado is not None:
-        print(f"\nResultado: {round(resultado, 2)} {unidad}")
+        print(f"\n{formatear_numero(peso)} {unidad_origen} = {formatear_numero(resultado)} {unidad}")
