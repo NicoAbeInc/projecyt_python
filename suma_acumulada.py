@@ -1,6 +1,6 @@
 print("SUMA DE NUMEROS ACUMULADOS")
 
-numero_total = int(input("\nIngresa el numero acumulado"))
+numero_total = int(input("\nIngresa el numero acumulado: "))
 
 suma = 0
 
