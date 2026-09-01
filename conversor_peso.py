@@ -1,3 +1,5 @@
+from formatear_numero import formatear_numeros
+
 print("=== CONVERSOR DE PESO ===")
 
 print("\nUnidades disponibles: ")
@@ -11,11 +13,6 @@ unidad_salida = int(input("\nSelecciona la unidad de destino: "))
 
 peso = float(input("\nIngresa el peso: "))
 
-def formatear_numero(numero):
-    if numero.is_integer():
-        return int(numero)
-    
-    return round(numero, 2)
 
 if unidad_entrada == 1:
     kilogramos = peso
@@ -60,4 +57,4 @@ if kilogramos is not None:
         print("\nUnidad de destino no valida")
         
     if resultado is not None:
-        print(f"\n{formatear_numero(peso)} {unidad_origen} = {formatear_numero(resultado)} {unidad}")
+        print(f"\n{formatear_numeros(peso)} {unidad_origen} = {formatear_numeros(resultado)} {unidad}")
