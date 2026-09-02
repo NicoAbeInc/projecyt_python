@@ -10,7 +10,7 @@ while jugador not in opciones:
     
 computadora = random.choice(opciones)
 
-print(f"Computadora: {computadora}")
+print(f"\nComputadora: {computadora}")
 
 if jugador == computadora:
     print("\nEmpate")
