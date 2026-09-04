@@ -34,11 +34,20 @@ while True:
         contactos.append({"id": id_ult, "nombre": nom, "telefono": tel, "email": ema})
         
     elif opcion == 3:
-        elim = input("Contacto a eliminar: ")
+        
+        eliminado = False
+        
+        elim = input("\nContacto a eliminar: ")
         for contacto in contactos:
             if contacto["nombre"] == elim:
                 contactos.remove(contacto)
+                eliminado = True
                 break
+            
+        if eliminado:
+            print("Contacto eliminado.")
+        else:
+            print("No se encontro un contacto con ese nombre.")
         
     elif opcion == 4:
         break
